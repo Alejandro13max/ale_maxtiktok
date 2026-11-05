@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPulse Live - Tienda Deportiva en Directo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Botón Hamburguesa Principal (Solo dice EN VIVO) -->
+  <header class="top-nav">
+    <button id="btnMenuLive" class="live-badge-btn">
+      <span class="hamburger-icon">☰</span> EN VIVO
+    </button>
+  </header>
+
+  <!-- Layout Principal (Oculto por defecto) -->
+  <div id="mainContent" class="live-layout hidden">
+    
+    <main class="stream-container">
+      <div id="liveContainer" class="video-screen">
+        <div class="live-header-overlay">
+          <span class="live-status-pill">📡 TRANSMITIENDO AHORA</span>
+          <span class="viewers-count">👁️ 3.4k espectadores</span>
+        </div>
+
+        <div class="stream-info-overlay">
+          <h3>⚡ APEX PULSE - Pro Training Live</h3>
+          <p>Lanzamiento exclusivo de equipamiento y ropa de alto rendimiento</p>
+        </div>
+
+        <div class="floating-offers">
+          <p class="offers-title">🔥 Ofertas Activas en Pantalla:</p>
+          <div class="products-grid">
+            <button class="btn-oferta" data-prod="Camiseta Térmica Compression Pro 50% OFF">
+              👕 Camiseta Térmica Pro
+            </button>
+            <button class="btn-oferta" data-prod="Calzas Deportivas AeroFlex 40% OFF">
+              🩳 Calzas AeroFlex
+            </button>
+            <button class="btn-oferta" data-prod="Zapatillas Running Carbon X 30% OFF">
+              👟 Zapatillas Carbon X
+            </button>
+          </div>
+          
+          <button class="btn-like" data-action="like">
+            💜 ¡Enviar Apoyo y Likes al Live Stream![cite: 2]
+          </button>
+        </div>
+      </div>
+
+      <div class="live-controls">
+        <div class="checkout-card">
+          <h4>🛒 Compra Rápida en Directo</h4>
+          <form id="orderForm">
+            <div class="form-row">
+              <select id="variantSelect">
+                <option value="Kit Starter (Camiseta + Shaker) - 190 BOB">Kit Starter (Camiseta + Shaker) - 190 BOB</option>
+                <option value="Kit Pro Running (Calzas + Camiseta) - 320 BOB">Kit Pro Running (Calzas + Camiseta) - 320 BOB</option>
+                <option value="Kit Elite Total (Zapatillas + Ropa Completa) - 650 BOB">Kit Elite Total (Zapatillas + Ropa Completa) - 650 BOB</option>
+              </select>
+              <input type="text" id="userTikTok" placeholder="@usuario_deporte" required>
+            </div>
+            <button type="submit" class="btn-order">⚡ Confirmar Pedido Flash</button>
+          </form>
+        </div>
+
+        <div class="chat-section">
+          <h4>💬 Chat de la Comunidad</h4>
+          <div class="chat-box">
+            <input type="text" id="chatInput" placeholder="Escribe tu duda sobre tallas o stock...">
+            <button id="btnEnviarChat" class="btn-enviar">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar-log">
+      <h3>📋 Bitácora del Stream</h3>
+      <p class="log-subtitle">Registro de eventos en tiempo real</p>
+      <div id="logOutput" class="log-stream">
+        <div>[Sistema] Conectado a ApexPulse Live. Escuchando eventos...</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
